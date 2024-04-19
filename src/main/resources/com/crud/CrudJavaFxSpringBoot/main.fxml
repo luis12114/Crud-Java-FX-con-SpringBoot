@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crud.CrudJavaFxSpringBoot.Controller">
+   <children>
+      <Label layoutX="226.0" layoutY="6.0" prefHeight="40.0" prefWidth="146.0" text="***  CRUD ***" textFill="#0c1794">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="64.0" text="ID" />
+      <Label layoutX="105.0" layoutY="112.0" text="Nombre" />
+      <Label layoutX="105.0" layoutY="166.0" text="Telefono" />
+      <TextField fx:id="txtId" disable="true" layoutX="158.0" layoutY="60.0" prefHeight="26.0" prefWidth="203.0" />
+      <TextField fx:id="txtName" layoutX="158.0" layoutY="107.0" prefHeight="26.0" prefWidth="203.0" />
+      <TextField fx:id="txtTel" layoutX="158.0" layoutY="161.0" prefHeight="26.0" prefWidth="203.0" />
+      <Button fx:id="btnCreate" layoutX="390.0" layoutY="59.0" mnemonicParsing="false" onAction="#Saved" prefHeight="27.0" prefWidth="93.0" text="Guardar" />
+      <Button fx:id="btnClear" layoutX="388.0" layoutY="59.0" mnemonicParsing="false" onAction="#Clear" prefHeight="27.0" prefWidth="94.0" text="Limpiar" visible="false" />
+      <Button fx:id="btnUpdate" layoutX="390.0" layoutY="106.0" mnemonicParsing="false" onAction="#Edit" prefHeight="27.0" prefWidth="86.0" text="Actulizar" visible="false" />
+      <Button fx:id="btnDelete" layoutX="390.0" layoutY="161.0" mnemonicParsing="false" onAction="#Delete" prefHeight="27.0" prefWidth="86.0" text="Eliminar" visible="false" />
+      <Label layoutX="106.0" layoutY="211.0" text="Total  Registros ---&gt;" />
+      <Label fx:id="lblTotal" layoutX="240.0" layoutY="211.0" textFill="#1e28e4">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <Label fx:id="lblWarning" layoutX="361.0" layoutY="209.0" text="* Por favor ingrese un nombre" textFill="#bc0404" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ListView fx:id="list" layoutX="96.0" layoutY="262.0" prefHeight="295.0" prefWidth="421.0" />
+   </children>
+</AnchorPane>
